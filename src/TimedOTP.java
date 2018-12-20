@@ -2,18 +2,18 @@
 	Package: TimedOTP
 	Author : Rishu Sarpal
 	Date : 01/04/2015
-	Description: Open Connections to MQ. Put and Get meessages from MQ in Text and Byte formats
+	Description: Generate a timed OTP
 
     Required Jars: commons.codec-1.9.jar package for TOTP
             import org.apache.commons.codec.binary.*;
             import org.apache.commons.codec.DecoderException;
 
 	Compile :
-	javac -d . jmsMessaging.java -cp "com.ibm.mq.allclient-9.0.4.0.jar;javax.jms-api-2.0.1.jar"
-	jar -cvf messaging.jar com/rsarpal/xmloperations/*.class com/rsarpal/JmsMQOperations/*.class
+	javac -d . TimedOTP.java -cp "commons.codec-1.9.jar"
+	jar -cvf timedotp.jar com/rsarpal/TimedOTP/*.class com/rsarpal/NetworkTime/*.class
 
 	Constructor:
-        JmsMQOperations(String host, int port,String channel, String manager, String user, String password, String queue)
+        public TimedOTP(String s, long timeInMillis, int otpValidity)
 
     Methods:
 
