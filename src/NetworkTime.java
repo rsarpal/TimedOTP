@@ -57,7 +57,7 @@ public class NetworkTime {
 	private String TIME_SERVER;
 	
 	public NetworkTime( String timeServer ) throws Exception{
-		//TIME_SERVER = "ns16.europe.nokia.com";   //nokia time server
+		//TIME_SERVER = "ns16.europe.com";   // time server
 		TIME_SERVER = timeServer;
 
 	}
